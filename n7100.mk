@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/i9300
+LOCAL_PATH := device/samsung/n7100
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
@@ -214,4 +214,4 @@ TARGET_OMX_PATH := hardware/samsung/exynos/multimedia/openmax
 $(call inherit-product, hardware/samsung/exynos4x12.mk)
 $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 
-$(call inherit-product-if-exists, vendor/samsung/i9300/i9300-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/n7100/n7100-vendor.mk)

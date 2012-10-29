@@ -48,13 +48,13 @@ TARGET_NO_RADIOIMAGE := true
 
 TARGET_PROVIDES_INIT := true
 TARGET_PROVIDES_INIT_TARGET_RC := true
-TARGET_RECOVERY_INITRC := device/samsung/i9300/recovery.rc
+TARGET_RECOVERY_INITRC := device/samsung/n7100/recovery.rc
 
-TARGET_SPECIFIC_HEADER_PATH := device/samsung/i9300/overlay/include
+TARGET_SPECIFIC_HEADER_PATH := device/samsung/n7100/overlay/include
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/samsung/smdk4412
-TARGET_KERNEL_CONFIG := cyanogenmod_i9300_defconfig
+TARGET_KERNEL_CONFIG := cyanogenmod_n7100_defconfig
 BOARD_KERNEL_CMDLINE := "console=ttySAC2,115200"
 BOARD_KERNEL_BASE := 0x40000000
 BOARD_KERNEL_PAGESIZE := 2048
@@ -70,7 +70,7 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 TARGET_USERIMAGES_USE_EXT4 := true
 
 # Graphics
-BOARD_EGL_CFG := device/samsung/i9300/configs/egl.cfg
+BOARD_EGL_CFG := device/samsung/n7100/configs/egl.cfg
 USE_OPENGL_RENDERER := true
 BOARD_USES_SKIAHWJPEG := true
 COMMON_GLOBAL_CFLAGS += -DSEC_HWJPEG_G2D
@@ -135,8 +135,8 @@ BOARD_HAVE_SAMSUNG_BLUETOOTH := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/s3c-usbgadget/gadget/lun%d/file"
 
 # Recovery
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/i9300/recovery/recovery_keys.c
-BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/i9300/recovery/graphics.c
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/n7100/recovery/recovery_keys.c
+BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/n7100/recovery/graphics.c
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
 BOARD_UMS_LUNFILE := "/sys/class/android_usb/android0/f_mass_storage/lun0/file"
 BOARD_USES_MMCUTILS := true
@@ -149,7 +149,7 @@ BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charg
 BOARD_BATTERY_DEVICE_NAME := "battery"
 
 # assert
-TARGET_OTA_ASSERT_DEVICE := m0,i9300,GT-I9300
+TARGET_OTA_ASSERT_DEVICE := m0,n7100,GT-N7100
 
 # inherit from the proprietary version
--include vendor/samsung/i9300/BoardConfigVendor.mk
+-include vendor/samsung/n7100/BoardConfigVendor.mk
