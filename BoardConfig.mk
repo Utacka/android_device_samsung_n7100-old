@@ -149,7 +149,7 @@ BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charg
 BOARD_BATTERY_DEVICE_NAME := "battery"
 
 # assert
-TARGET_OTA_ASSERT_DEVICE := m0,n7100,GT-N7100
+TARGET_OTA_ASSERT_DEVICE := t03g,n7100,GT-N7100
 
 # inherit from the proprietary version
 -include vendor/samsung/n7100/BoardConfigVendor.mk
