@@ -377,7 +377,7 @@ on boot
     rm /data/app/tlcd_sock
 
     # make param block device link for SysScope
-    symlink /dev/block/mmcblk0p4 /dev/block/param
+    symlink /dev/block/mmcblk0p7 /dev/block/param
 
 # serial keyboard port
 	chown root system /dev/ttySAC2
