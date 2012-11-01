@@ -78,19 +78,22 @@ on post-fs-data
     chmod 0644 /efs/redata.bin
     chmod 0644 /efs/h2k.dat
 
-# Camera
-    mkdir /data/cfw 0775 system system
+# Camera firmware
+	mkdir /data/cfw 0775 system system
+    chown system media /data/cfw/SlimISP_GD.bin
+    chmod 0775 /data/cfw/SlimISP_GD.bin
+    chown system media /data/cfw/SlimISP_ZD.bin
+    chmod 0775 /data/cfw/SlimISP_ZD.bin
 
-# Permissions for Camera
+# Camera
     chown system radio /sys/class/camera/rear/rear_camfw
     chown system radio /sys/class/camera/rear/rear_camtype
     chown system radio /sys/class/camera/rear/rear_flash
+    chmod 0666 /sys/class/camera/rear/rear_flash
     chown system radio /sys/class/camera/rear/isp_core
     chown system radio /sys/class/camera/front/front_camfw
     chown system radio /sys/class/camera/front/front_camtype
-    chown system radio /sys/class/camera/flash/rear_flash
-    chown radio system /sys/devices/platform/samsung-pd.5/s3c-fimc.2/range_mode
-    chmod 0660 /sys/devices/platform/samsung-pd.5/s3c-fimc.2/range_mode
+    write /data/ISP_CV 1
 
 	symlink /dev/block/mmcblk0p4 /dev/block/param
 
