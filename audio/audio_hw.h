@@ -118,9 +118,9 @@ struct route_setting
 };
 
 struct route_setting voicecall_default[] = {
-    { .ctl_name = "AIF2DACL Source", .intval = 0, },
-    { .ctl_name = "AIF2DACR Source", .intval = 0, },
     { .ctl_name = "AIF2 Mode", .intval = 0, },
+    { .ctl_name = "MainMicBias Mode", .intval = 3, },
+    { .ctl_name = "SubMicBias Mode", .intval = 3, },
     { .ctl_name = "DAC1L Mixer AIF1.1 Switch", .intval = 1, },
     { .ctl_name = "DAC1R Mixer AIF1.1 Switch", .intval = 1, },
     { .ctl_name = "DAC1L Mixer AIF2 Switch", .intval = 1, },
@@ -130,12 +130,12 @@ struct route_setting voicecall_default[] = {
 };
 
 struct route_setting voicecall_default_disable[] = {
-    { .ctl_name = "AIF2DACL Source", .intval = 0, },
-    { .ctl_name = "AIF2DACR Source", .intval = 1, },
     { .ctl_name = "AIF2 Mode", .intval = 0, },
     { .ctl_name = "DAC1L Mixer AIF2 Switch", .intval = 0, },
     { .ctl_name = "DAC1R Mixer AIF2 Switch", .intval = 0, },
     { .ctl_name = "AIF2DAC Mux", .strval = "AIF3DACDAT", },
+    { .ctl_name = "MainMicBias Mode", .intval = 3, },
+    { .ctl_name = "SubMicBias Mode", .intval = 3, },
     { .ctl_name = "Main Mic Switch", .intval = 0, },
     { .ctl_name = "MIXINL IN1L Switch", .intval = 0, },
     { .ctl_name = "Sub Mic Switch", .intval = 0, },
@@ -145,7 +145,8 @@ struct route_setting voicecall_default_disable[] = {
 
 struct route_setting default_input[] = {
     { .ctl_name = "Main Mic Switch", .intval = 1, },
-    { .ctl_name = "IN1L Volume", .intval = 30, },
+    { .ctl_name = "MainMicBias Mode", .intval = 1, },
+    { .ctl_name = "IN2L Volume", .intval = 30, },
     { .ctl_name = "MIXINL IN2L Switch", .intval = 1, },
     { .ctl_name = "MIXINL IN2L Volume", .intval = 0, },
     { .ctl_name = "AIF1ADC1 HPF Mode", .intval = 0, },
@@ -155,6 +156,7 @@ struct route_setting default_input[] = {
 
 struct route_setting default_input_disable[] = {
     { .ctl_name = "Main Mic Switch", .intval = 0, },
+    { .ctl_name = "MainMicBias Mode", .intval = 0, },
     { .ctl_name = "IN1L Volume", .intval = 22, },
     { .ctl_name = "MIXINL IN2L Switch", .intval = 0, },
     { .ctl_name = "AIF1ADC1 HPF Switch", .intval = 0, },
