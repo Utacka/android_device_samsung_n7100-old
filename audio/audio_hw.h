@@ -148,7 +148,7 @@ struct route_setting default_input[] = {
     { .ctl_name = "MainMicBias Mode", .intval = 1, },
     { .ctl_name = "IN2L Volume", .intval = 30, },
     { .ctl_name = "MIXINL IN2L Switch", .intval = 1, },
-    { .ctl_name = "MIXINL IN2L Volume", .intval = 0, },
+    { .ctl_name = "MIXINL IN2L Volume", .intval = 1, },
     { .ctl_name = "AIF1ADC1 HPF Mode", .intval = 0, },
     { .ctl_name = "AIF1ADC1 HPF Switch", .intval = 1, },
     { .ctl_name = NULL, },
