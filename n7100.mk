@@ -44,12 +44,12 @@ PRODUCT_COPY_FILES := \
     $(LOCAL_PATH)/ueventd.smdk4x12.rc:recovery/root/ueventd.smdk4x12.rc
 
 # Camera FW
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/80cfw:system/etc/init.d/80cfw
+# PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/80cfw:system/etc/init.d/80cfw
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/tiny_hw.xml:system/etc/sound/m0 \
+    $(LOCAL_PATH)/configs/tiny_hw.xml:system/etc/sound/t03g \
     $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf
 
 # Vold and Storage
